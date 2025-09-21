@@ -331,12 +331,15 @@ const SponsorsSection = () => {
             <p className="text-gray-300 text-lg mb-6">
               Join us in empowering the next generation of innovators and creators
             </p>
-            <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black">
+            <a 
+              href="mailto:geeksforgeeksadgips@gmail.com?subject=Sponsorship Inquiry - Live The Code 3.0&body=Hello,%0D%0A%0D%0AI am interested in sponsoring Live The Code 3.0 hackathon.%0D%0A%0D%0APlease provide me with more information about sponsorship opportunities.%0D%0A%0D%0AThank you!"
+              className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black"
+            >
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#10B981_50%,#E2E8F0_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-6 py-1 text-sm font-medium text-white backdrop-blur-3xl group-hover:bg-green-900/20 transition-colors">
                 Become a Sponsor
               </span>
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>

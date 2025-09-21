@@ -45,8 +45,8 @@ const Footer = () => {
   ];
 
   const contactInfo = {
-    email: 'contact@gfgadgips.club',
-    phone: '+91 98765 43210',
+    email: 'geeksforgeeksadgips@gmail.com',
+    phone: '+91 92892 82648',
     address: 'Dr. Akhilesh Das Gupta Institute of Professional Studies, Delhi'
   };
 
@@ -54,7 +54,6 @@ const Footer = () => {
     { name: 'About Us', href: '#about' },
     { name: 'Timeline', href: '#timeline' },
     { name: 'Themes', href: '#themes' },
-    { name: 'Rules', href: '#rules' },
     { name: 'FAQ', href: '#faq' }
   ];
 
@@ -66,8 +65,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black border-t border-green-500/20" id="contact">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-br from-black via-gray-900 to-black border-t border-green-500/20 relative overflow-hidden" id="contact">
+      {/* Background Gradient Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-green-900/5 via-transparent to-emerald-900/5" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-green-500/3 to-emerald-500/3 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-l from-emerald-500/3 to-green-500/3 rounded-full blur-3xl" />
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo and Description */}
           <motion.div
@@ -101,7 +105,7 @@ const Footer = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="w-12 h-12 bg-gray-900 border border-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-500/50 transition-all duration-300"
+                  className="w-12 h-12 bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-500/50 transition-all duration-300"
                 >
                   {link.icon}
                 </motion.a>
@@ -147,22 +151,22 @@ const Footer = () => {
           >
             <h3 className="text-white font-bold text-xl mb-6">Contact Us</h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-5 h-5 text-green-400 mt-0.5">
+              <div className="flex justify-start items-center space-x-3">
+                <div className="text-green-400">
                   <IoMail />
                 </div>
                 <span className="text-gray-300">{contactInfo.email}</span>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <div className="w-5 h-5 text-green-400 mt-0.5">
+              <div className="flex justify-start items-center space-x-3">
+                <div className="text-green-400">
                   <FaPhone />
                 </div>
                 <span className="text-gray-300">{contactInfo.phone}</span>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <div className="w-5 h-5 text-green-400 mt-0.5">
+              <div className="flex justify-start items-start space-x-3">
+                <div className="text-green-400 mt-1">
                     <FaLocationDot />
                 </div>
                 <span className="text-gray-300">{contactInfo.address}</span>

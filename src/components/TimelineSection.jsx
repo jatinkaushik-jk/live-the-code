@@ -47,10 +47,15 @@ const timelineData = [
 
 const TimelineSection = () => {
   return (
-    <div className="py-20 bg-black relative overflow-hidden" id="timeline">
+    <div className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden" id="timeline">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-900/10 to-black" />
       <div className="absolute inset-0 bg-grid-white/[0.02]" />
+      
+      {/* Additional Gradient Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/5 via-transparent to-green-900/5" />
+      <div className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-r from-green-500/5 to-emerald-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-gradient-to-l from-emerald-500/5 to-green-500/5 rounded-full blur-3xl" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -96,7 +101,7 @@ const TimelineSection = () => {
                         : 'from-emerald-500/20 to-green-500/20'
                     } rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                     
-                    <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-green-500/50 transition-colors duration-300">
+                    <div className="relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-green-500/50 transition-colors duration-300">
                       {/* Time Badge */}
                       <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold mb-4 ${
                         item.color === 'green'
@@ -143,12 +148,12 @@ const TimelineSection = () => {
           <p className="text-lg text-gray-300 mb-8">
             Ready to be part of this incredible journey?
           </p>
-          <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black">
+          <a href='#' className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black">
             <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#10B981_50%,#E2E8F0_100%)]" />
             <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-6 py-1 text-sm font-medium text-white backdrop-blur-3xl group-hover:bg-green-900/20 transition-colors">
               Join The Journey
             </span>
-          </button>
+          </a>
         </motion.div>
       </div>
     </div>

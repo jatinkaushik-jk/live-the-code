@@ -1,5 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { 
+  FaCreditCard, 
+  FaGraduationCap, 
+  FaLink, 
+  FaHospital, 
+  FaSeedling, 
+  FaCity 
+} from 'react-icons/fa';
 
 // Static data for themes
 const themesData = [
@@ -7,7 +15,7 @@ const themesData = [
     id: 1,
     title: "FinTech",
     description: "Revolutionary financial technology solutions for modern banking and payments",
-    icon: "💰",
+    icon: FaCreditCard,
     color: "from-green-400 to-emerald-500",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20"
@@ -16,7 +24,7 @@ const themesData = [
     id: 2,
     title: "Ed-Tech",
     description: "Innovative educational platforms and learning management systems",
-    icon: "🎓",
+    icon: FaGraduationCap,
     color: "from-emerald-400 to-green-500", 
     bgColor: "bg-emerald-500/10",
     borderColor: "border-emerald-500/20"
@@ -25,7 +33,7 @@ const themesData = [
     id: 3,
     title: "Web 3.0",
     description: "Decentralized applications and blockchain-powered solutions",
-    icon: "🔗",
+    icon: FaLink,
     color: "from-green-400 to-teal-500",
     bgColor: "bg-green-500/10", 
     borderColor: "border-green-500/20"
@@ -34,7 +42,7 @@ const themesData = [
     id: 4,
     title: "Health",
     description: "Healthcare technology solutions improving patient care and medical processes",
-    icon: "🏥",
+    icon: FaHospital,
     color: "from-teal-400 to-emerald-500",
     bgColor: "bg-teal-500/10",
     borderColor: "border-teal-500/20"
@@ -43,7 +51,7 @@ const themesData = [
     id: 5,
     title: "AgriTech",
     description: "Smart farming solutions using IoT, AI and sustainable technology",
-    icon: "🌱",
+    icon: FaSeedling,
     color: "from-emerald-400 to-green-500",
     bgColor: "bg-emerald-500/10",
     borderColor: "border-emerald-500/20"
@@ -52,7 +60,7 @@ const themesData = [
     id: 6,
     title: "Smart India",
     description: "Digital transformation solutions for smart cities and governance",
-    icon: "🇮🇳",
+    icon: FaCity,
     color: "from-green-400 to-emerald-500",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20"
@@ -61,11 +69,16 @@ const themesData = [
 
 const ThemesSection = () => {
   return (
-    <div className="py-20 bg-gradient-to-br from-black to-gray-900 relative overflow-hidden" id="themes">
+    <div className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden" id="themes">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-grid-white/[0.02]" />
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-green-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-r from-green-500/5 to-emerald-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-l from-emerald-500/5 to-green-500/5 rounded-full blur-3xl" />
+      
+      {/* Additional Gradient Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-green-900/3 via-transparent to-emerald-900/3" />
+      <div className="absolute top-0 right-1/3 w-64 h-64 bg-gradient-to-br from-teal-500/3 to-green-500/3 rounded-full blur-2xl" />
+      <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-gradient-to-tl from-emerald-500/3 to-teal-500/3 rounded-full blur-2xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -99,10 +112,10 @@ const ThemesSection = () => {
               {/* Glow Effect */}
               <div className={`absolute inset-0 bg-gradient-to-r ${theme.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
               
-              <div className={`relative ${theme.bgColor} backdrop-blur-sm border ${theme.borderColor} rounded-2xl p-8 h-full hover:border-opacity-50 transition-all duration-300`}>
+              <div className={`relative ${theme.bgColor} backdrop-blur-sm border ${theme.borderColor} rounded-2xl p-8 h-full hover:border-opacity-50 transition-all duration-300 bg-gradient-to-br from-gray-800/30 to-gray-900/20`}>
                 {/* Theme Icon */}
                 <div className="flex items-center justify-center w-16 h-16 mb-6">
-                  <span className="text-5xl">{theme.icon}</span>
+                  <theme.icon className="text-5xl text-green-400" />
                 </div>
 
                 {/* Theme Title */}
@@ -147,19 +160,22 @@ const ThemesSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center mt-16"
         >
-          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Can't find your theme?
             </h3>
             <p className="text-gray-300 text-lg mb-6">
               Don't worry! You can also propose your own innovative theme and build something completely unique.
             </p>
-            <button className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900">
+            <a 
+              href="mailto:geeksforgeeksadgips@gmail.com?subject=Theme Proposal - Live The Code 3.0&body=Hello,%0D%0A%0D%0AI would like to propose a new theme for Live The Code 3.0 hackathon.%0D%0A%0D%0ATheme Details:%0D%0A- Theme Name:%0D%0A- Description:%0D%0A- Why this theme would be valuable:%0D%0A%0D%0APlease let me know if you need any additional information.%0D%0A%0D%0AThank you!"
+              className="group relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+            >
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2E8F0_0%,#10B981_50%,#E2E8F0_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-900 px-6 py-1 text-sm font-medium text-white backdrop-blur-3xl group-hover:bg-green-900/20 transition-colors">
                 Propose Your Theme
               </span>
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
