@@ -1,5 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { FaUsers } from 'react-icons/fa';
+import { PiMicrophoneStageFill } from "react-icons/pi";
+import { PiTargetFill } from "react-icons/pi";
+import { BsFillLaptopFill } from "react-icons/bs";
+import { FaFilePen } from "react-icons/fa6";
 
 // Static data for timeline
 const timelineData = [
@@ -8,7 +13,7 @@ const timelineData = [
     title: "Registration Begins",
     description: "Kickstart your journey! Register now to secure your spot and be part of an exhilarating hackathon adventure.",
     time: "Day 1 - 9:00 AM",
-    icon: "📝",
+    icon: FaFilePen,
     color: "green"
   },
   {
@@ -16,7 +21,7 @@ const timelineData = [
     title: "Speaker Session", 
     description: "Get inspired by industry leaders! Join our speaker session for insights and tips to enhance your hackathon experience.",
     time: "Day 1 - 11:00 AM",
-    icon: "🎤",
+    icon: PiMicrophoneStageFill,
     color: "emerald"
   },
   {
@@ -24,7 +29,7 @@ const timelineData = [
     title: "Orientation",
     description: "Prepare for the challenge ahead! Attend the orientation to understand the event details and meet fellow participants.",
     time: "Day 1 - 2:00 PM", 
-    icon: "🧭",
+    icon: FaUsers,
     color: "green"
   },
   {
@@ -32,7 +37,7 @@ const timelineData = [
     title: "24 Hour Coding Period",
     description: "Dive into the coding marathon! Collaborate, innovate, and create your project in a thrilling 24-hour coding session.",
     time: "Day 1 - 4:00 PM",
-    icon: "💻",
+    icon: BsFillLaptopFill,
     color: "emerald"
   },
   {
@@ -40,7 +45,7 @@ const timelineData = [
     title: "Pitch Presentation",
     description: "Showcase your hard work! Present your project to the judges and make an impression with your innovative solutions.",
     time: "Day 3 - 10:00 AM",
-    icon: "🎯",
+    icon: PiTargetFill,
     color: "green"
   }
 ];
@@ -113,7 +118,7 @@ const TimelineSection = () => {
 
                       {/* Content */}
                       <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span className="text-3xl">{item.icon}</span>
+                        <item.icon className="text-3xl text-green-400" />
                         {item.title}
                       </h3>
                       <p className="text-gray-300 text-lg leading-relaxed">

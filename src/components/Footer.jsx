@@ -86,7 +86,7 @@ const Footer = () => {
                 <span className="text-black font-bold text-lg">LTC</span>
               </div>
               <div className="text-white font-bold text-2xl">
-                Live The Code <span className="text-green-400">3.0</span>
+                Live The Code <span className="text-green-400">4.0</span>
               </div>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-6 max-w-md">

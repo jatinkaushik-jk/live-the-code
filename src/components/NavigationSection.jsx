@@ -70,13 +70,13 @@ const NavigationSection = () => {
             >
               <div className="flex items-center space-x-3">
                 <div className="text-white font-bold text-2xl group-hover:text-green-400 transition-colors duration-300">
-                  Live The Code <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">3.0</span>
+                  Live The Code <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">4.0</span>
                 </div>
               </div>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-0">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
